@@ -18,6 +18,7 @@
                 try{
                     self::$db=new \PDO($db_info['dsn'],
                     $db_info['dbuser'],$db_info['dbpassword']);
+                    return "Se ha connectado correctamente a la BD";
                 }catch(\PDOException $e){
                     die($e->getMessage());
                 }

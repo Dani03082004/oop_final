@@ -15,6 +15,7 @@
 
     //carga de servicios siguiendo dependencias
     $db=DatabaseConnection::getConnection();
+    echo $db;
     $services=new Services();
     $services->addServices('db',fn()=>$db);
     $db=$services->getService('db');
